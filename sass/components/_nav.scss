@@ -1,0 +1,31 @@
+.nav{
+  grid-column: full-start / full-end;
+  display: flex;
+  padding: 1rem;
+  gap:4rem;
+  font-size: 1.7rem;
+  font-weight: bold;
+  align-items: center;
+
+
+  a:nth-child(1){
+    font-size: 3rem;
+    font-weight: 900;
+
+    &::after{
+     content: ' \2122';
+    font-size: 1.1rem;
+    }
+  }
+
+  a:nth-child(3){
+    margin-right:auto;
+  }
+
+
+  & > * {
+    text-decoration: none;
+    color:$color-grey;
+
+  }
+}

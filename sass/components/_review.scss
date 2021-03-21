@@ -1,0 +1,54 @@
+.review{
+    grid-column: center-start / center-end;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(min-content,27rem));
+    justify-content: center;
+    grid-column-gap:2rem;
+    color:$color-grey-light-1;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+
+.stars{
+  display:flex;
+
+  .star{
+    width:2rem;
+    height: 2rem;
+    fill:$color-primary;
+  }
+
+}
+
+.review__text{
+  [class*='supporter']{
+    color:$color-brown;
+  }
+  &-supporter{
+
+  &-1{
+    word-spacing: -3px;
+  }
+  &-2{
+  letter-spacing: -3px;
+  }
+  &-3{
+
+  }
+  &-4{
+    letter-spacing: -3px;
+    margin-top: 2.8rem;
+  }
+  &-5{
+    letter-spacing: 3px;
+  }
+
+  }
+}
+
+
+.span{
+  text-decoration: underline;
+  font-size: 1rem;
+}

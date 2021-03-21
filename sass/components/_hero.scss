@@ -1,0 +1,36 @@
+.hero{
+  grid-column: center-start / col-end 6;
+  grid-row: 3 / 4;
+  z-index: 2;
+  align-self:center;
+  display: grid;
+
+
+
+  &__heading-1{
+    margin-bottom: 3rem;
+  }
+
+  &__heading-2{
+    margin-bottom: 3rem;
+  }
+
+  &__bottom{
+  align-self: center;
+  }
+  &__btn{
+    align-self: start;
+    justify-self:start;
+    background-color: $color-primary;
+    border:none;
+    color:#fff;
+    padding: 1.9rem 12.2rem;
+    font-weight: 600;
+    font-size: 1.3rem;
+  }
+
+  &__dot{
+    color:$color-primary;
+  }
+
+}
