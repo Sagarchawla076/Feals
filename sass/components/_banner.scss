@@ -1,8 +1,13 @@
 .banner{
+
   background-color: $color-primary;
   grid-column: full-start / full-end;
   text-align: center;
   padding:2rem 0;
   line-height: 1;
-
+   // width: 100%;
+   // z-index: 500;
+   // position: fixed;
+   // top:0;
+   // left:0;
 }

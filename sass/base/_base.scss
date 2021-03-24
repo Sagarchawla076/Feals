@@ -10,12 +10,13 @@ html {
 }
 body {
   box-sizing: border-box;
-
+  font-weight:700;
 }
 
 .container{
-
+  position: relative;
   display: grid;
-  grid-template-rows: 5rem min-content 90vh min-content 100vh 100vh  repeat(9,min-content);
-  grid-template-columns: [full-start] 1fr [center-start] repeat(16, [col-start] minmax(min-content,9.5rem) [col-end]) [center-end] 1fr [full-end];
+  grid-template-rows: 5rem min-content min-content min-content min-content 100vh min-content min-content max-content min-content min-content repeat(8,min-content);
+  grid-template-columns: [full-start] 1fr [center-start] repeat(16, [col-start] minmax(min-content,10rem) [col-end]) [center-end] 1fr [full-end];
+
 }

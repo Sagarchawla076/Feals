@@ -1,17 +1,21 @@
 .review{
     grid-column: center-start / center-end;
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(min-content,27rem));
+    grid-template-columns: repeat(auto-fit,minmax(min-content,27rem));
+    justify-items:center;
     justify-content: center;
     grid-column-gap:2rem;
     color:$color-grey-light-1;
     font-size: 1.6rem;
     line-height: 2;
+    padding: 5rem 0;
+    align-items: center;
 }
 
 
 .stars{
   display:flex;
+  margin-bottom: 2rem;
 
   .star{
     width:2rem;
@@ -22,13 +26,18 @@
 }
 
 .review__text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   [class*='supporter']{
     color:$color-brown;
   }
-  &-supporter{
 
+  &-supporter{
+  text-align: center;
   &-1{
-    word-spacing: -3px;
+    letter-spacing: 3px;
+    font-size: 3.5rem;
   }
   &-2{
   letter-spacing: -3px;
