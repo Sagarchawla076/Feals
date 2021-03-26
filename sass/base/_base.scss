@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  scroll-behavior: smooth;
 }
 html {
   font-size: 62.5%;
@@ -16,7 +17,7 @@ body {
 .container{
   position: relative;
   display: grid;
-  grid-template-rows: 5rem min-content min-content min-content min-content 100vh min-content min-content max-content min-content min-content repeat(8,min-content);
+  grid-template-rows: 5rem min-content min-content min-content min-content 100vh min-content min-content max-content min-content min-content  min-content;
   grid-template-columns: [full-start] 1fr [center-start] repeat(16, [col-start] minmax(min-content,10rem) [col-end]) [center-end] 1fr [full-end];
 
 }

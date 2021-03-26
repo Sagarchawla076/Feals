@@ -1,0 +1,147 @@
+.footer {
+  background-color: $color-brown;
+  grid-column: full-start / full-end;
+  color: white;
+  padding: 10rem 0;
+  padding-bottom: 0;
+  font-size: 1.6rem;
+  font-weight: 400;
+
+  &__1 {
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+    flex-wrap: wrap;
+
+    [class^='footer__1'] {
+      display: flex;
+      flex-direction: column;
+      grid-gap: 2rem;
+      flex-shrink: 1;
+      flex-wrap: wrap;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .logo {
+      font-size: 4.6rem;
+      font-weight: 700;
+      transform: translateY(-1rem);
+
+      &::after {
+        content: ' \2122';
+        font-size: 1.1rem;
+        margin-left: -1.2rem;
+        margin-top: 0.5rem;
+      }
+    }
+
+    &--1 {}
+
+    &--2 {}
+
+    &--3 {}
+
+    &--4 {
+      width: 20%;
+
+      .stayintouch {
+        text-transform: uppercase;
+        font-size: 1.6rem;
+      }
+
+      .input-container {
+        display: flex;
+        border-bottom: 2px solid $color-grey-light-1;
+
+        input {
+          border: none;
+          background-color: $color-brown;
+          display: inline-block;
+          width: 200%;
+          padding-bottom: 1.5rem;
+
+          &::placeholder {
+            color: white;
+            opacity: 1;
+            font-weight: 600;
+            font-size: 1.5rem;
+          }
+
+          &:focus {
+            outline: none;
+            box-shadow: 2px solid hsla(0,0%,100%,.5);
+          }
+        }
+
+        button {
+          background-color: $color-brown;
+          font-size: 1.5rem;
+          color: hsla(0,0%,100%,.5);
+          border: none;
+          text-transform: uppercase;
+          font-weight: 600;
+          letter-spacing: 2px;
+        }
+      }
+    }
+  }
+
+  .icons {
+    display: flex;
+    gap: 1rem;
+
+    .visa {
+      width: 3.5rem;
+      height: 3.5rem;
+      cursor: pointer;
+    }
+
+    .mastercard {
+      width: 3.9rem;
+      height: 3.9rem;
+      cursor: pointer;
+    }
+
+    svg:nth-child(-n+3) {
+      fill: white;
+    }
+
+    svg {
+      cursor: pointer;
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+
+  &__2 {
+    display: flex;
+    justify-content: center;
+    gap:10vw;
+    margin: 10rem 0;
+    margin-bottom: 6rem;
+    align-items: center;
+    flex-wrap: wrap;
+    &--text{
+      border:1px solid white;
+      padding: 2.5rem;
+      font-size: 1.4rem;
+      align-self: center;
+    }
+
+    &--list{
+      ul{
+        list-style: none;
+        font-size: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap:1rem;
+        text-align: right;
+      }
+    }
+  }
+}

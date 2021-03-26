@@ -3,7 +3,8 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; }
+  box-sizing: inherit;
+  scroll-behavior: smooth; }
 
 html {
   font-size: 62.5%; }
@@ -15,7 +16,7 @@ body {
 .container {
   position: relative;
   display: grid;
-  grid-template-rows: 5rem min-content min-content min-content min-content 100vh min-content min-content max-content min-content min-content repeat(8, min-content);
+  grid-template-rows: 5rem min-content min-content min-content min-content 100vh min-content min-content max-content min-content min-content  min-content;
   grid-template-columns: [full-start] 1fr [center-start] repeat(16, [col-start] minmax(min-content, 10rem) [col-end]) [center-end] 1fr [full-end]; }
 
 body {
@@ -90,9 +91,9 @@ body {
 .benifits {
   grid-column: full-start / full-end;
   background-color: #fdf8f1;
-  color: #746661; }
+  color: #746661;
+  padding: 10rem; }
   .benifits__heading {
-    padding-top: 14rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -243,6 +244,106 @@ body {
   .features .leaf {
     transform: rotate(90deg); }
 
+.footer {
+  background-color: #746661;
+  grid-column: full-start / full-end;
+  color: white;
+  padding: 10rem 0;
+  padding-bottom: 0;
+  font-size: 1.6rem;
+  font-weight: 400; }
+  .footer__1 {
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+    flex-wrap: wrap; }
+    .footer__1 [class^='footer__1'] {
+      display: flex;
+      flex-direction: column;
+      grid-gap: 2rem;
+      flex-shrink: 1;
+      flex-wrap: wrap; }
+    .footer__1 a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500; }
+    .footer__1 .logo {
+      font-size: 4.6rem;
+      font-weight: 700;
+      transform: translateY(-1rem); }
+      .footer__1 .logo::after {
+        content: ' \2122';
+        font-size: 1.1rem;
+        margin-left: -1.2rem;
+        margin-top: 0.5rem; }
+    .footer__1--4 {
+      width: 20%; }
+      .footer__1--4 .stayintouch {
+        text-transform: uppercase;
+        font-size: 1.6rem; }
+      .footer__1--4 .input-container {
+        display: flex;
+        border-bottom: 2px solid #aba49d; }
+        .footer__1--4 .input-container input {
+          border: none;
+          background-color: #746661;
+          display: inline-block;
+          width: 200%;
+          padding-bottom: 1.5rem; }
+          .footer__1--4 .input-container input::placeholder {
+            color: white;
+            opacity: 1;
+            font-weight: 600;
+            font-size: 1.5rem; }
+          .footer__1--4 .input-container input:focus {
+            outline: none;
+            box-shadow: 2px solid rgba(255, 255, 255, 0.5); }
+        .footer__1--4 .input-container button {
+          background-color: #746661;
+          font-size: 1.5rem;
+          color: rgba(255, 255, 255, 0.5);
+          border: none;
+          text-transform: uppercase;
+          font-weight: 600;
+          letter-spacing: 2px; }
+  .footer .icons {
+    display: flex;
+    gap: 1rem; }
+    .footer .icons .visa {
+      width: 3.5rem;
+      height: 3.5rem;
+      cursor: pointer; }
+    .footer .icons .mastercard {
+      width: 3.9rem;
+      height: 3.9rem;
+      cursor: pointer; }
+    .footer .icons svg:nth-child(-n+3) {
+      fill: white; }
+    .footer .icons svg {
+      cursor: pointer;
+      width: 3rem;
+      height: 3rem; }
+  .footer__2 {
+    display: flex;
+    justify-content: center;
+    gap: 10vw;
+    margin: 10rem 0;
+    margin-bottom: 6rem;
+    align-items: center;
+    flex-wrap: wrap; }
+    .footer__2--text {
+      border: 1px solid white;
+      padding: 2.5rem;
+      font-size: 1.4rem;
+      align-self: center; }
+    .footer__2--list ul {
+      list-style: none;
+      font-size: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      text-align: right; }
+
 .fproduct {
   grid-column: full-start / full-end;
   margin-top: 10rem;
@@ -390,7 +491,7 @@ body {
 .story {
   grid-column: full-start / full-end;
   text-align: center;
-  padding: 12rem; }
+  padding: 12rem 0; }
   .story__text > * {
     margin-bottom: 1.2rem; }
   .story__text--para {
@@ -409,10 +510,36 @@ body {
     font-size: 4.5rem;
     font-weight: 300;
     font-family: serif; }
+  .story .getfeals {
+    margin-top: 15rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center; }
+    .story .getfeals__heading {
+      color: #746661;
+      font-size: 4.5rem;
+      font-weight: 300;
+      font-family: serif; }
+    .story .getfeals__para {
+      color: #aba49d;
+      font-size: 1.8rem;
+      letter-spacing: .5px;
+      font-weight: 400;
+      line-height: 1; }
+    .story .getfeals__btn {
+      border: none;
+      background-color: #e69e6c;
+      color: white;
+      padding: 1.7rem 11.5rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      border-radius: 4px;
+      font-size: 1.4rem; }
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(20, [col-start] minmax(min-content, 9rem) [col-end]);
+  grid-template-columns: repeat(20, [col-start] minmax(min-content, 10rem) [col-end]);
   grid-template-rows: min-content;
   grid-column-gap: 1rem; }
   .gallery .one {
@@ -427,19 +554,27 @@ body {
     grid-column: col-start 17 / col-end 20; }
   .gallery > * {
     display: grid;
-    grid-template-rows: 1fr 1fr; }
+    grid-template-rows: 1fr min-content;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+    border-radius: 5px; }
   .gallery__img {
     object-fit: cover;
     width: 100%;
-    height: 100%;
+    height: 36rem;
     border-radius: 5px; }
   .gallery__textbox {
-    transform: translateX(1rem);
+    margin-left: 1rem;
     display: grid;
-    grid-template-columns: min-content max-content; }
+    grid-template-columns: min-content max-content;
+    padding: 1rem; }
     .gallery__textbox--img {
       width: 4rem;
-      height: 4rem; }
+      height: 4rem;
+      border-radius: 50%; }
+    .gallery__textbox--details .name {
+      color: #aba49d; }
+    .gallery__textbox--details .id {
+      font-weight: 100; }
 
 .btn {
   background-color: #e69e6c;
